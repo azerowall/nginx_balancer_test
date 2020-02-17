@@ -1,0 +1,12 @@
+version: "3"
+
+# in real case app1 == app2
+services:
+  backend_1:
+    build: app1
+  backend_2:
+    build: app2
+  balancer:
+    build: balancer
+    ports:
+      - 5555:80
